@@ -668,7 +668,66 @@ figure>figcaption>.title {
 }
 /*Newsletter footer end*/
 /*Backdrop form*/
-.backdrop-form{
+.newsletter-text {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+
+.newsletter-input {
+    width: 358px;
+    background-color: var(--background-black);
+    height: 50px;
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--white-color);
+}
+
+.nesletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-label {
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px;
+    gap: 20px;
+    padding-left: 78px;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.sign-up-button {
+    width: 200px;
+    height: 50px;
+    margin-top: 108px;
+    margin-left: 12px;
+    background-color: var(--brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    color: var(--white-color);
+    font-size: 16p;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+/*Newsletter footer end*/
+/*Backdrop form*/
+.backdrop-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -676,7 +735,8 @@ figure>figcaption>.title {
     gap: 10px;
     padding-top: 40px;
 }
-.backdrop-form-btn{
+
+.backdrop-form-btn {
     background-color: var(--brand-color);
     color: var(--white-color);
     width: 200px;
@@ -692,23 +752,26 @@ figure>figcaption>.title {
     line-height: 1.87;
     letter-spacing: 0.06em;
 }
-.backdrop-form-title{
+
+.backdrop-form-title {
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 0.03em;
     line-height: 1.15;
     padding-bottom: px;
 }
+
 .backdrop-form-name,
 .backdrop-form-phone,
-.backdrop-form-email{
+.backdrop-form-email {
     width: 448px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
 }
-.backdrop-form-comment{
+
+.backdrop-form-comment {
     width: 448px;
     height: 120px;
     resize: none;
@@ -721,56 +784,63 @@ figure>figcaption>.title {
     letter-spacing: 0.01em;
     line-height: 1.16;
 }
-.backdrop-form-comment::placeholder{
+
+.backdrop-form-comment::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
+
 .backdrop-form-name:focus-within,
 .backdrop-form-phone:focus-within,
 .backdrop-form-email:focus-within,
-.backdrop-form-comment:focus-within{
+.backdrop-form-comment:focus-within {
     border: 1px solid #2196F3;
     outline: none;
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop-form-label-name,
 .backdrop-form-label-phone,
 .backdrop-form-label-email,
-.backdrop-form-label-comment{
+.backdrop-form-label-comment {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 .backdrop-form-label-name:focus-within,
 .backdrop-form-label-phone:focus-within,
 .backdrop-form-label-email:focus-within,
-.backdrop-form-label-comment:focus-within{
+.backdrop-form-label-comment:focus-within {
     fill: var(--brand-color);
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-person,
 .icon-phone-form,
-.icon-letter-form{
+.icon-letter-form {
     position: absolute;
     display: inline-block;
     left: 15px;
     top: 32px;
 }
+
 .backdrop-form-name-title,
 .backdrop-form-phone-title,
 .backdrop-form-email-title,
-.backdrop-form-comment-title{
+.backdrop-form-comment-title {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.16;
     color: #757575;
 }
-.backdrop-form-rules + .backdrop-form-rules-title{
+
+.backdrop-form-rules+.backdrop-form-rules-title {
     padding-top: 10px;
     padding-bottom: 20px;
     position: relative;
@@ -778,7 +848,8 @@ figure>figcaption>.title {
     display: inline-block;
     color: grey;
 }
-.backdrop-form-rules + .backdrop-form-rules-title::before{
+
+.backdrop-form-rules+.backdrop-form-rules-title::before {
     content: "";
     position: absolute;
     left: 0;
@@ -786,13 +857,14 @@ figure>figcaption>.title {
     top: 16px;
     width: 16px;
     height: 15px;
-    border: 3px solid black;
+    border: 2px solid black;
     background-color: var(--white-color);
     transition-property: background-color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop-form-rules:checked + .backdrop-form-rules-title::before{
+
+.backdrop-form-rules:checked+.backdrop-form-rules-title::before {
     content: "";
     position: absolute;
     left: 0;
@@ -806,6 +878,7 @@ figure>figcaption>.title {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop-form-rules:checked+.backdrop-form-rules-title::after {
     content: "";
     position: absolute;
@@ -816,18 +889,28 @@ figure>figcaption>.title {
     height: 15px;
     outline: none;
 }
-.backdrop-form-rules-title{
+
+.backdrop-form-rules-title {
     color: #757575;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.71;
 }
-.form-link{
+
+.form-link {
     color: var(--brand-color);
 }
-.backdrop-form-rules{
-   opacity: 0;
+
+.backdrop-form-rules {
+    position: relative;
+    opacity: 0;
 }
 
+.icon-check {
+    position: absolute;
+    top: 443px;
+    left: 54px;
+    fill: white;
+}
 /*Backdrop form end*/
