@@ -758,7 +758,7 @@ figure>figcaption>.title {
     font-size: 20px;
     letter-spacing: 0.03em;
     line-height: 1.15;
-    padding-bottom: px;
+    padding-bottom: 2px;
 }
 
 .backdrop-form-name,
@@ -840,56 +840,13 @@ figure>figcaption>.title {
     color: #757575;
 }
 
-.backdrop-form-rules+.backdrop-form-rules-title {
-    padding-top: 10px;
-    padding-bottom: 20px;
+.backdrop-form-rules-title {
     position: relative;
     cursor: pointer;
     display: inline-block;
     color: grey;
+    padding-left: 8px;
 }
-
-.backdrop-form-rules+.backdrop-form-rules-title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    margin-left: -28px;
-    top: 16px;
-    width: 16px;
-    height: 15px;
-    border: 2px solid black;
-    background-color: var(--white-color);
-    transition-property: background-color, border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop-form-rules:checked+.backdrop-form-rules-title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    margin-left: -28px;
-    top: 16px;
-    width: 16px;
-    height: 15px;
-    border: none;
-    background-color: var(--brand-color);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop-form-rules:checked+.backdrop-form-rules-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    margin-left: -28px;
-    top: 16px;
-    width: 16px;
-    height: 15px;
-    outline: none;
-}
-
 .backdrop-form-rules-title {
     color: #757575;
     font-weight: 400;
@@ -901,16 +858,33 @@ figure>figcaption>.title {
 .form-link {
     color: var(--brand-color);
 }
-
 .backdrop-form-rules {
     position: relative;
-    opacity: 0;
+    display: none;
 }
-
+.backdrop-form-label-rules{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 .icon-check {
     position: absolute;
-    top: 443px;
+    bottom: 124px;
     left: 54px;
+    border: 2px solid black;
+    border-radius: 2px;
     fill: white;
+    cursor: pointer;
+    transition-property: fill border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-form-rules:checked + .icon-check{
+    fill: var(--white-color);
+    border: 1px solid var(--brand-color);
+    background: var(--brand-color);
+    cursor: pointer;
+    transition-property: fill border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Backdrop form end*/
